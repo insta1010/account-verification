@@ -1,0 +1,58 @@
+/* Reset some default styling */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Styling the message box */
+.message-box {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Heading styling */
+.message-box h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+.message-box p {
+    color: #555555;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Link styling */
+.message-box a {
+    color: #0095f6;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.message-box a:hover {
+    text-decoration: underline;
+}
